@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prueba del consumo ajax</title>
+    <script src="autocomplementacion.js"></script>
+    <script src="prueba.js"></script>
+  </head>
+  <body>
+    <p>nombre del pokemon</p>
+    <input type="text" id="nombre" list="lista"/>
+    <datalist id="lista"></datalist>
+    <p>id:</p>
+    <input type="number" id="pokemon"/>
+    <p>Generacion:</p>
+    <input type="text" id="generacion"/>
+    <p>habilidad:</p>
+    <input type="text" id="habilidad"/>
+    <p>movimientos:</p>
+    <textarea id="movimiento" rows="4" cols="50"></textarea>
+    <p>imagen:</p>
+     <img src="" id="img"></img>
+     <p>localizacion:</p>
+    <input type="text" id="localizacion"/>
+    <p>tipos:</p>
+    <input type="text" id="tipos"/>
+     <input type="button" onclick="llamarPokemon()" value="probar"/>
+  </body>
+</html>
