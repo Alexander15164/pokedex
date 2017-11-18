@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
+    <script src="js/autocomplementacion.js"></script>
 
   </head>
 
@@ -34,7 +35,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><input type="text" class="form-control" placeholder="Search for..." ></li>
+            <li><input type="text" class="form-control" placeholder="Search for..." id="nombre" list="lista" ></li>
+            <datalist id="lista"></datalist>
             <li><img src="img/bus.png" id="busca" width="45px" height="40px" alt=""></li>
             <li class="active"><a href="index.html">INICIO</a></li>
             <li><a href="about.html">ACERCA DE</a></li>
