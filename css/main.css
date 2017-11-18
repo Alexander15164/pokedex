@@ -506,8 +506,33 @@ display: none;
 
   #imagenpokes{
     position: relative;
-    top: 10px;
-    left: 160px;
+    top: 7px;
+    left: 150px;
+    align-content: center;
+  width: 15%;
+  height: 73%;
+}
+
+  #imagenpokes2{
+    position: relative;
+    top: 7px;
+    left: 270px;
     align-content: center;
   width: 13%;
-  height: 13%;}
+  height: 73%;}
+
+  #imagenpokes3{
+    position: relative;
+    top: 7px;
+    left: 390px;
+    align-content: center;
+  width: 13%;
+  height: 73%;}
+.contenedor_evolucion{
+  position: relative;
+  background-color: grey;
+  top: 7px;
+  left: 390px;
+  align-content: center;
+width: 13%;
+height: 60%;}
