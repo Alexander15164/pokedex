@@ -38,14 +38,15 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><input type="text" class="form-control" placeholder="Search for..." id="nombre" list="lista" ></li>
+            <li><input type="text" class="form-control" placeholder="Buscar por..." id="nombre" list="lista" ></li>
             <datalist id="lista"></datalist>
-            <li><img src="img/bus.png" id="busca" width="45px" height="40px" alt="" onclick="llamarPokemon()"></li>
+            <li><a href="#mi-ancla"><img src="img/bus.png" id="busca" width="45px" height="40px" alt="" onclick="llamarPokemon()"></a></li>
             <li class="active"><a href="index.html">INICIO</a></li>
             <li><a href="about.html">ACERCA DE</a></li>
             <li><a href="login.html">INICIAR SESION</a></li>
             <li><a href="registro.html">REGISTRARSE</a></li>
             <li><a href="index.html">FAVORITOS</a></li>
+            <li></li>
             <li><img src="img/favoritoMas.png" width="30px" height="30px" alt="" id="corazon"></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -54,18 +55,39 @@
 
 	<div id="headerwrap">
 		<div class="container">
+
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
           <img src="img/pokemon.png"  id="imagen" alt="">
 
 				<!-- <h2>Yo te elijo</h2> -->
+
 				</div>
 			</div><!-- row -->
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a name="mi-ancla"></a>
 		</div><!-- container -->
+
+
 	</div><!-- headerwrap -->
 <br>
+<br><br><br>
+<div id="pageST">
+  <h1 id="bienvenida">Bienvenido a esta pokedex</h1>
+
+  <h2 id="info">Aqui encontraras la informacion acerca de los pokemones</h2>
+
+  <h3 id="indicacion">Puedes encontrarlos escribiendo su nombre en el buscador de arriba</h3>
+  <br>
+  <img src="img/indicacion.png" alt="imagen de indicacion" id="img">
+</div>
+
+  <img src="img/carga3.gif" alt="Cargando datos..." id="carga">
+
 <div id="information">
+
   <div id="informacion">
+
     <div  class="texto" id="numero">
       <img src="img/pokebola.png"   id="favore" >
       <p id="identificador"></p>
@@ -111,7 +133,7 @@
     <div class="primarios">
       <img src="" alt="" id="imagenpoke">
     </div>
-    <img src="img/poke.png" alt="Agregar a favorito" class="favorito" id="favor" onclick="Select_favorit()">
+    <img src="img/poke.png" alt="Agregar a favorito" class="favorito" id="favor" onclick="Select_favorit()" >
   </div>
   <div  class="texto" id="tipo1">
     <p class="name" id="type1"></p>
@@ -121,11 +143,13 @@
   </div>
 </div>
 <div id="evolucion">
-      <img src="img/016.png" alt="" id="imagenpokes">
-      <img src="img/flecha.png" alt="" id="flecha1">
-      <img src="img/017.png" alt="" id="imagenpokes2">
-      <img src="img/flecha.png" alt="" id="flecha2">
-      <img src="img/018.png" alt="" id="imagenpokes3">
+
+</div>
+<div class="evoluciones" id="evolution1">
+</div>
+<div class="evoluciones" id="evolution2">
+</div>
+<div class="evoluciones" id="evolution3">
 </div>
 <br>
 

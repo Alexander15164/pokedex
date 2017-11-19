@@ -50,7 +50,7 @@ for(i=0 ; i<pokemons.types.length ; i++){
   if (i == 1) {
     document.getElementById("tipo2").style.display = "block";
     document.getElementById("type2").innerHTML = pokemons.types[i].type.name;
-  }else {
+}else {
     document.getElementById("type1").innerHTML = pokemons.types[i].type.name;
   }
 }
@@ -100,6 +100,9 @@ break;
     //} else {
       //  document.getElementById("evolucion3").innerHTML = "Desconocido";
     //}
+      document.getElementById("carga").style.display="none";
+      document.getElementById("information").style.display="block";
+      document.getElementById("evolucion").style.display="block";
 
 }
 //llamar las especies
