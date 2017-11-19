@@ -426,7 +426,7 @@ height: 220px;
 border-radius: 10px;
 align-content: center;
 position: relative;
-top: -40px;
+top: -80px;
 left: 60px}
 
 #imagenpoke{
@@ -448,7 +448,7 @@ top: -30px;
   width:45px;
   height:45px;
   position: relative;
-  top: -70px;
+  top: -90px;
   left: 133px;
   background-image: url("img/fondo.jpg");
 
@@ -460,21 +460,20 @@ display: none;
   width:550px;
   height:30px;
   background-color: rgb(222, 222, 222);
+  border-radius: 10px;
 }
 
 #informacion{
   position: absolute;
   top: 70px;
-  left: 400px;
-  opacity: 0.5;
-
+  left: 350px;
 }
 
 #information{
   position: relative;
-  left: 8%;
-  width: 84%;
-  height: 350px;
+  left: 10%;
+  width: 80%;
+  height: 420px;
   border: 10px solid rgb(26, 26, 26);
   border-style: ridge;
   background-color: rgb(0, 0, 0);
@@ -507,7 +506,7 @@ display: none;
   #imagenpokes{
     position: relative;
     top: 7px;
-    left: 150px;
+    left: 120px;
     align-content: center;
   width: 15%;
   height: 73%;
@@ -524,7 +523,7 @@ display: none;
   #imagenpokes3{
     position: relative;
     top: 7px;
-    left: 390px;
+    left: 410px;
     align-content: center;
   width: 13%;
   height: 73%;}
@@ -536,3 +535,74 @@ display: none;
   align-content: center;
 width: 13%;
 height: 60%;}
+
+#flecha1{
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+}
+
+#flecha2{
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  left: 600px;
+  top: 50px;
+}
+/*PARA EL CONTENEDOR DEL ID*/
+#numero{
+  width: 110px !important;
+  height: 33px !important;
+}
+#favore{
+  width: 30px;
+  height: 30px;
+}
+#identificador{
+  position: absolute;
+  top: 2px;
+  left: 40px;
+  font-weight: bold;
+  color: rgb(26, 26, 26)!important;
+  font-size: 20px !important;
+}
+
+/*PARA EL CONTENEDOR DEL NOMBRE*/
+#nombre{
+  position: absolute;
+  top: 39px;
+  left: 0px;
+  width: 210px !important;
+  height: 33px !important;
+}
+.name{
+  position: relative;
+  top: 1px;
+  left: 10px;
+  font-weight: bold;
+  color: rgb(26, 26, 26)!important;
+  font-size: 20px !important;
+}
+
+/*PARA EL CONTENEDOR DE LOS PODERES*/
+#poderes{
+  width: 150px !important;
+  height: 33px !important;
+
+}
+#powers{
+position: relative;
+top: -18px;
+border: none;
+background-color: rgb(222, 222, 222);
+border-radius: 10px;
+resize: none;
+}
+/*PARA EL CONTENEDOR DE LA GENERACION*/
+#generacion{
+  position: absolute;
+  top: -200px;
+  width: 50px;
+}
