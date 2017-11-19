@@ -8,6 +8,9 @@
     <meta name="author" content="Alexander Monzon, Erick FLores">
     <link rel="shortcut icon" href="img/pokebola.png">
     <script src="js/funciones.js" charset="utf-8"></script>
+    <script src="js/autocomplementacion.js"></script>
+    <script src="js/prueba.js"></script>
+    <script src="js/evolucion.js"></script>
     <title>Pokedex</title>
 
     <!-- Bootstrap core CSS -->
@@ -37,7 +40,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><input type="text" class="form-control" placeholder="Search for..." id="nombre" list="lista" ></li>
             <datalist id="lista"></datalist>
-            <li><img src="img/bus.png" id="busca" width="45px" height="40px" alt=""></li>
+            <li><img src="img/bus.png" id="busca" width="45px" height="40px" alt="" onclick="llamarPokemon()"></li>
             <li class="active"><a href="index.html">INICIO</a></li>
             <li><a href="about.html">ACERCA DE</a></li>
             <li><a href="login.html">INICIAR SESION</a></li>
@@ -65,142 +68,56 @@
   <div id="informacion">
     <div  class="texto" id="numero">
       <img src="img/pokebola.png"   id="favore" >
-      <p id="identificador">016</p>
+      <p id="identificador"></p>
     </div>
     <br>
     <div  class="texto" id="nombre">
-      <p class="name">Nombre: Feraligator</p>
+      <p class="name" id="nombre2">Nombre: </p>
     </div>
     <br>
     <div  class="texto" id="poderes">
       <p class="name">Movimientos:</p>
       <textarea id="powers"rows="7" cols="35" disabled>
-        mega-punch
-        fire-punch
-        thunder-punch
-        scratch
-        swords-dance
-        cut
-        mega-kick
-        headbutt
-        body-slam
-        take-down
-        double-edge
-        leer
-        growl
-        ember
-        flamethrower
-        submission
-        counter
-        seismic-toss
-        strength
-        dragon-rage
-        fire-spin
-        dig
-        toxic
-        rage
-        mimic
-        double-team
-        smokescreen
-        defense-curl
-        reflect
-        bide
-        fire-blast
-        swift
-        skull-bash
-        rest
-        rock-slide
-        slash
-        substitute
-        snore
-        curse
-        protect
-        scary-face
-        mud-slap
-        outrage
-        endure
-        swagger
-        fury-cutter
-        attract
-        sleep-talk
-        return
-        frustration
-        dynamic-punch
-        dragon-breath
-        iron-tail
-        metal-claw
-        hidden-power
-        sunny-day
-        rock-smash
-        heat-wave
-        will-o-wisp
-        facade
-        focus-punch
-        brick-break
-        secret-power
-        overheat
-        rock-tomb
-        aerial-ace
-        dragon-claw
-        natural-gift
-        fling
-        dragon-pulse
-        shadow-claw
-        fire-fang
-        captivate
-        hone-claws
-        flame-burst
-        flame-charge
-        round
-        echoed-voice
-        incinerate
-        inferno
-        fire-pledge
-        work-up
-        confide
-        power-up-punch
       </textarea>
     </div>
     <br>
     <div  class="texto" id="generacion">
-      <p class="name">Generacion: Generacion I</p>
+      <p class="name" id="generacion2">Generacion: </p>
     </div>
     <br>
     <div  class="texto" id="peso">
-      <p class="name" id="load">Peso: 1,8 kg</p>
+      <p class="name" id="load">Peso:</p>
     </div>
     <div  class="texto" id="altura">
-      <p class="name" id="altitude">Altura: 0,4 m</p>
+      <p class="name" id="altitude">Altura:</p>
     </div>
     <div  class="texto" id="descripcion">
       <p class="name">Descripcion:</p>
       <textarea id="description"rows="4" cols="38" disabled>
-Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.
       </textarea>
     </div>
     <div  class="texto" id="habilidades">
       <p class="name">Habilidades</p>
       <textarea id="capacitys"rows="3" cols="38" disabled>
-Bulbasaur, Ivysaur, Venusaur, Chikorita, Bayleef, Meganium, Treecko, Grovyle,
       </textarea>
     </div>
     <div  class="texto" id="ubicacion">
-      <p class="name" id="location">Ubicacion: Campo</p>
+      <p class="name" id="location">Ubicacion:</p>
     </div>
     </div>
     <br>
   <div id="contenedor" >
       <h1 id="titulo">Resultado</h1>
     <div class="primarios">
-      <img src="img/016.png" alt="" id="imagenpoke">
+      <img src="" alt="" id="imagenpoke">
     </div>
     <img src="img/poke.png" alt="Agregar a favorito" class="favorito" id="favor" onclick="Select_favorit()">
   </div>
   <div  class="texto" id="tipo1">
-    <p class="name" id="type1">Volador</p>
+    <p class="name" id="type1"></p>
   </div>
   <div  class="texto" id="tipo2">
-    <p class="name" id="type2">Normal</p>
+    <p class="name" id="type2"></p>
   </div>
 </div>
 <div id="evolucion">

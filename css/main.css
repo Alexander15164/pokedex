@@ -670,6 +670,7 @@ resize: none;
 #tipo2{
   position: absolute;
   background-color: rgb(115, 115, 115);
+  display: none;
   top: 300px;
   left: 105px;
   width: 100px;
