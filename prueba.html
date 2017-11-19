@@ -5,13 +5,16 @@
     <title>Prueba del consumo ajax</title>
     <script src="js/autocomplementacion.js"></script>
     <script src="js/prueba.js"></script>
+    <script src="js/evolucion.js"></script>
   </head>
   <body>
-    <p>nombre del pokemon</p>
+    <p>nombre del pokemon</p> <input type="button" onclick="llamarPokemon()" value="probar"/>
     <input type="text" id="nombre" list="lista"/>
     <datalist id="lista"></datalist>
     <p>id:</p>
     <input type="number" id="pokemon"/>
+    <p>Descripcion:</p>
+    <textarea id="descripcion" rows="4" cols="50"></textarea>
     <p>Generacion:</p>
     <input type="text" id="generacion"/>
     <p>habilidad:</p>
@@ -24,6 +27,15 @@
     <input type="text" id="localizacion"/>
     <p>tipos:</p>
     <input type="text" id="tipos"/>
-     <input type="button" onclick="llamarPokemon()" value="probar"/>
+    <label>Evolucion 1</label>
+    <p id="evolucion1"></p>
+    <label>Evolucion 2</label>
+    <p id="evolucion2"></p>
+    <label>Evolucion 3</label>
+    <p id="evolucion3"></p>
+   <input type="text" id="localizacion"/>
+   <div id="evolucion4">
+   </div>
+
   </body>
 </html>

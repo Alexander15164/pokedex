@@ -115,7 +115,7 @@ a:after {
 
 .navbar-inverse .navbar-brand i {
 	color: #ff7878;
-	font-size: 22px;
+	font-size: 300px;
 	letter-spacing: 1px;
 }
 
@@ -416,3 +416,123 @@ a:after {
 .pricing-option .pricing-signup:hover {
     background: #ff7878;
 }
+
+.primarios{
+background-color: rgb(222, 222, 222);
+-webkit-clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 100%, 91% 100%, 68% 84%, 30% 84%, 8% 100%, 0 100%);
+clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 100%, 91% 100%, 68% 84%, 30% 84%, 8% 100%, 0 100%);
+width: 190px;
+height: 220px;
+border-radius: 10px;
+align-content: center;
+position: relative;
+top: -40px;
+left: 60px}
+
+#imagenpoke{
+  position: relative;
+  top: 10px;
+  left: 24px;
+  align-content: center;
+width: 80%;
+height: 70%}
+
+#titulo{
+text-align: center;
+font-size: 40px;
+font-weight: bold;
+position: relative;
+top: -30px;
+}
+.favorito{
+  width:45px;
+  height:45px;
+  position: relative;
+  top: -70px;
+  left: 133px;
+  background-image: url("img/fondo.jpg");
+
+}
+#corazon{
+display: none;
+}
+.texto{
+  width:550px;
+  height:30px;
+  background-color: rgb(222, 222, 222);
+}
+
+#informacion{
+  position: absolute;
+  top: 70px;
+  left: 400px;
+  opacity: 0.5;
+
+}
+
+#information{
+  position: relative;
+  left: 8%;
+  width: 84%;
+  height: 350px;
+  border: 10px solid rgb(26, 26, 26);
+  border-style: ridge;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.80;
+  border-radius: 35px;
+}
+#evolucion{
+  position: relative;
+  left: 15%;
+  width: 70%;
+  height: 200px;
+  border: 10px solid rgb(26, 26, 26);
+  border-style: ridge;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.80;
+  border-radius: 35px;
+}
+/*#evo{
+  background-color: rgb(222, 222, 222);
+  -webkit-clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 100%, 91% 100%, 68% 84%, 30% 84%, 8% 100%, 0 100%);
+  clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 100%, 91% 100%, 68% 84%, 30% 84%, 8% 100%, 0 100%);
+  width: 190px;
+  height: 22000px;
+  border-radius: 10px;
+  align-content: center;
+  position: relative;
+  top: -40px;
+  left: 60px}*/
+
+  #imagenpokes{
+    position: relative;
+    top: 7px;
+    left: 150px;
+    align-content: center;
+  width: 15%;
+  height: 73%;
+}
+
+  #imagenpokes2{
+    position: relative;
+    top: 7px;
+    left: 270px;
+    align-content: center;
+  width: 13%;
+  height: 73%;}
+
+  #imagenpokes3{
+    position: relative;
+    top: 7px;
+    left: 390px;
+    align-content: center;
+  width: 13%;
+  height: 73%;}
+.contenedor_evolucion{
+  position: relative;
+  background-color: grey;
+  top: 7px;
+  left: 390px;
+  align-content: center;
+width: 13%;
+height: 60%;}

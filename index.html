@@ -7,7 +7,7 @@
     <meta name="description" content="Pokedex">
     <meta name="author" content="Alexander Monzon, Erick FLores">
     <link rel="shortcut icon" href="img/pokebola.png">
-
+    <script src="js/funciones.js" charset="utf-8"></script>
     <title>Pokedex</title>
 
     <!-- Bootstrap core CSS -->
@@ -42,6 +42,8 @@
             <li><a href="about.html">ACERCA DE</a></li>
             <li><a href="login.html">INICIAR SESION</a></li>
             <li><a href="registro.html">REGISTRARSE</a></li>
+            <li><a href="index.html">FAVORITOS</a></li>
+            <li><img src="img/favorito.png" width="30px" height="30px" alt="" id="corazon"></li>
 
           </ul>
         </div><!--/.nav-collapse -->
@@ -59,9 +61,44 @@
 			</div><!-- row -->
 		</div><!-- container -->
 	</div><!-- headerwrap -->
+<br>
+<div id="information">
+  <div id="informacion">
+    <div  class="texto" id="numero">
 
-<p>texto de prueva</p>
-<p>texto de prueva</p>
+    </div>
+    <br>
+    <div  class="texto" id="nombre">
+      Nombre
+    </div>
+    <br>
+    <div  class="texto">
+      Habilidades
+    </div>
+    <br>
+    <div  class="texto">
+      Localizacion
+    </div>
+    <br>
+    <div  class="texto" id="evoluciones">
+      Evoluciones
+    </div>
+    </div>
+    <br>
+  <div id="contenedor" >
+      <h1 id="titulo">Resultado</h1>
+    <div class="primarios">
+      <img src="img/016.png" alt="" id="imagenpoke">
+    </div>
+    <img src="img/pokeboladown.png" alt="Agregar a favorito" class="favorito" id="favor" onclick="Select_favorit()">
+  </div>
+</div>
+<div id="evolucion">
+      <img src="img/016.png" alt="" id="imagenpokes">
+      <img src="img/017.png" alt="" id="imagenpokes2">
+      <img src="img/018.png" alt="" id="imagenpokes3">
+</div>
+<br>
 
 	<!-- FEATURE SECTION -->
 	<div id="r">
