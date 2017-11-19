@@ -426,7 +426,7 @@ height: 220px;
 border-radius: 10px;
 align-content: center;
 position: relative;
-top: -40px;
+top: -80px;
 left: 60px}
 
 #imagenpoke{
@@ -448,9 +448,9 @@ top: -30px;
   width:45px;
   height:45px;
   position: relative;
-  top: -70px;
+  top: -110px;
   left: 133px;
-  background-image: url("img/fondo.jpg");
+
 
 }
 #corazon{
@@ -460,27 +460,27 @@ display: none;
   width:550px;
   height:30px;
   background-color: rgb(222, 222, 222);
+  border-radius: 10px;
 }
 
 #informacion{
   position: absolute;
   top: 70px;
-  left: 400px;
-  opacity: 0.5;
-
+  left: 350px;
 }
 
 #information{
   position: relative;
-  left: 8%;
-  width: 84%;
-  height: 350px;
+  left: 10%;
+  width: 80%;
+  height: 420px;
   border: 10px solid rgb(26, 26, 26);
   border-style: ridge;
   background-color: rgb(0, 0, 0);
   opacity: 0.80;
   border-radius: 35px;
 }
+/*PARA EL CONTENEDOR DE LAS EVOLUCIONES*/
 #evolucion{
   position: relative;
   left: 15%;
@@ -492,22 +492,11 @@ display: none;
   opacity: 0.80;
   border-radius: 35px;
 }
-/*#evo{
-  background-color: rgb(222, 222, 222);
-  -webkit-clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 100%, 91% 100%, 68% 84%, 30% 84%, 8% 100%, 0 100%);
-  clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 100%, 91% 100%, 68% 84%, 30% 84%, 8% 100%, 0 100%);
-  width: 190px;
-  height: 22000px;
-  border-radius: 10px;
-  align-content: center;
-  position: relative;
-  top: -40px;
-  left: 60px}*/
 
   #imagenpokes{
     position: relative;
     top: 7px;
-    left: 150px;
+    left: 120px;
     align-content: center;
   width: 15%;
   height: 73%;
@@ -524,7 +513,7 @@ display: none;
   #imagenpokes3{
     position: relative;
     top: 7px;
-    left: 390px;
+    left: 410px;
     align-content: center;
   width: 13%;
   height: 73%;}
@@ -536,3 +525,152 @@ display: none;
   align-content: center;
 width: 13%;
 height: 60%;}
+
+#flecha1{
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+}
+
+#flecha2{
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  left: 600px;
+  top: 50px;
+}
+/*PARA EL CONTENEDOR DEL ID*/
+#numero{
+  width: 110px !important;
+  height: 33px !important;
+}
+#favore{
+  width: 30px;
+  height: 30px;
+}
+#identificador{
+  position: absolute;
+  top: 2px;
+  left: 40px;
+  font-weight: bold;
+  color: rgb(26, 26, 26)!important;
+  font-size: 17px !important;
+}
+
+/*PARA EL CONTENEDOR DEL NOMBRE*/
+#nombre{
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 210px !important;
+  height: 33px !important;
+}
+.name{
+  position: relative;
+  top: 1px;
+  left: 10px;
+  font-weight: bold;
+  color: rgb(26, 26, 26)!important;
+  font-size: 15px !important;
+}
+
+/*PARA EL CONTENEDOR DE LOS PODERES*/
+#poderes{
+  width: 150px !important;
+  height: 33px !important;
+  top: 20px;
+  position: relative;
+
+}
+#powers{
+position: relative;
+top: -18px;
+border: none;
+font-size: 13.5px !important;
+background-color: rgb(222, 222, 222);
+border-radius: 10px;
+resize: none;
+}
+/*PARA EL CONTENEDOR DE LA GENERACION*/
+#generacion{
+  position: absolute;
+  top: 280px;
+  width: 250px;
+}
+
+/*PARA EL CONTENEDOR DEL PESO*/
+#peso{
+  position: absolute;
+  top: 2px;
+  left: 320px;
+  height: 33px;
+  width: 120px;
+}
+
+/*PARA EL CONTENEDOR DE LA ALTURA*/
+#altura{
+  position: absolute;
+  top: 2px;
+  left: 460px;
+  height: 33px;
+  width: 120px;
+}
+/*PARA EL CONTENEDOR DE LA DESCRIPCION*/
+#descripcion{
+  position: absolute;
+  top: 50px;
+  left: 320px;
+  height: 33px;
+  width: 120px;
+}
+#description{
+position: relative;
+top: -18px;
+border: none;
+font-size: 13px !important;
+background-color: rgb(222, 222, 222);
+border-radius: 10px;
+resize: none;
+}
+
+/*PARA EL CONTENEDOR DE LAS HABILIDADES*/
+#habilidades{
+  position: absolute;
+  top: 175px;
+  left: 320px;
+  height: 33px;
+  width: 120px;
+}
+#capacitys{
+position: relative;
+top: -18px;
+border: none;
+font-size: 13px !important;
+background-color: rgb(222, 222, 222);
+border-radius: 10px;
+resize: none;
+}
+
+#ubicacion{
+  position: absolute;
+  top: 280px;
+  left: 320px;
+  height: 33px;
+  width: 220px;}
+
+#tipo1{
+  position: absolute;
+  background-color:rgb(20, 182, 193);
+  top: 260px;
+  left: 105px;
+  width: 100px;
+}
+#tipo2{
+  position: absolute;
+  background-color: rgb(115, 115, 115);
+  top: 300px;
+  left: 105px;
+  width: 100px;
+}
