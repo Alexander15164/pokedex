@@ -24,6 +24,7 @@ for(i=0; i<802 ; i++){
 }
 }
 function llamarPokemon(){
+  document.getElementById("tipo2").style.display = "none";
   var poke = document.getElementById("nombre").value;
   for(i=0; i<802 ; i++){
     if(pokecomply[i] == poke){
