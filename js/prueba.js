@@ -2,6 +2,9 @@ var pokemons
 var aEvoluciones = [];
 var iContador = 0;
 function consumirpokemon(pokemon) {
+  document.getElementById("information").style.display="none";
+  document.getElementById("evolucion").style.display="none";
+  document.getElementById("carga").style.display="block";
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -17,9 +20,9 @@ xmlhttp.send();
 //mostrar los pokemon
 function mostrarPokemon(){
   //document.getElementById("evolucion4").innerHTML = "";
-  //document.getElementById("evolucion1").innerHTML = "";
-  //document.getElementById("evolucion2").innerHTML = "";
-  //document.getElementById("evolucion3").innerHTML = "";
+  document.getElementById("evolution1").innerHTML = "";
+  document.getElementById("evolution2").innerHTML = "";
+  document.getElementById("evolution3").innerHTML = "";
 document.getElementById("identificador").innerHTML = pokemons.id;
 document.getElementById("nombre2").innerHTML = "Nombre: "+pokemons.species.name;
 var peso = pokemons.weight;
@@ -29,7 +32,11 @@ var altura = pokemons.height;
 altura = (altura/10);
 document.getElementById("altitude").innerHTML = "Altura: "+altura+" m";
 
-document.getElementById("capacitys").value = pokemons.abilities[0].ability.name;
+var habilidad = "";
+for (var i = 0; i <pokemons.abilities.length; i++) {
+  habilidad = habilidad + pokemons.abilities[i].ability.name + "\n";
+}
+document.getElementById("capacitys").value = habilidad;
 
 var mov="";
 document.getElementById("powers").value = "";
@@ -67,7 +74,7 @@ var poke=0;
 //evolucion 1
     //document.getElementById("evolucion1").innerHTML = evolucion.chain.species.name;
     aEvoluciones[0] = evolucion.chain.species.url.slice(42, -1);
-    consumidor4(aEvoluciones[iContador],poke);
+    consumidor4(aEvoluciones[0],poke);
     iContador = 1;
     console.log("urlEvolucion 1:  " + aEvoluciones[0]);
 
