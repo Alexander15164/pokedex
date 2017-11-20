@@ -735,4 +735,13 @@ text-transform: capitalize !important;
   display: none;
   position: relative;
   top: -40px;
-  left: 40%;
+  left: 40%;}
+
+#siguiente{
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  right: -120px;
+  top: 200px;
+
+}

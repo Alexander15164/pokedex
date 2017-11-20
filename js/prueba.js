@@ -20,7 +20,7 @@ function mostrarPokemon(){
   //document.getElementById("evolucion1").innerHTML = "";
   //document.getElementById("evolucion2").innerHTML = "";
   //document.getElementById("evolucion3").innerHTML = "";
-document.getElementById("identificador").innerHTML = "0"+pokemons.id;
+document.getElementById("identificador").innerHTML = pokemons.id;
 document.getElementById("nombre2").innerHTML = "Nombre: "+pokemons.species.name;
 var peso = pokemons.weight;
 peso = (peso/10);
