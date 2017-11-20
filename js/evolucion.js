@@ -22,6 +22,7 @@ function consumidor4(poke2,poke){
           console.log(evolucion5);
           //var node0 = document.createElement("DIV");
           var node = document.createElement("IMG");
+
           var node2 = document.createElement("P");
           var textnode = document.createTextNode(evolucion5.name);
           console.log(textnode);
@@ -31,13 +32,30 @@ function consumidor4(poke2,poke){
           //node0.appendChild(node);
           //node0.appendChild(node2);
         if(poke==0){
+
+          node.setAttribute("id","prinEVO");
+          node.setAttribute("class", "evolucioness");
           document.getElementById("evolution1").appendChild(node);
+          node2.setAttribute("id","priNOM")
+          node2.setAttribute("class", "evolucionesNOM");
           document.getElementById("evolution1").appendChild(node2);
+
         }else if(poke==1){
+
+          node.setAttribute("id","secEVO");
+          node.setAttribute("class", "evolucioness");
           document.getElementById("evolution2").appendChild(node);
+          node2.setAttribute("id","secNOM");
+          node2.setAttribute("class", "evolucionesNOM");
           document.getElementById("evolution2").appendChild(node2);
+
         }else if (poke==2) {
+
+          node.setAttribute("id","terEVO");
+          node.setAttribute("class", "evolucioness");
           document.getElementById("evolution3").appendChild(node);
+          node2.setAttribute("id","terNOM");
+          node2.setAttribute("class", "evolucionesNOM");
           document.getElementById("evolution3").appendChild(node2);
         }
 
