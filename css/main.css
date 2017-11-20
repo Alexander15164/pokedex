@@ -743,5 +743,11 @@ text-transform: capitalize !important;
   position: absolute;
   right: -120px;
   top: 200px;
-
+}
+#anterior{
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  left: -120px;
+  top: 200px;
 }

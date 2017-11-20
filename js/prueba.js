@@ -24,7 +24,18 @@ function mostrarPokemon(){
   document.getElementById("evolution2").innerHTML = "";
   document.getElementById("evolution3").innerHTML = "";
 document.getElementById("identificador").innerHTML = pokemons.id;
+if (pokemons.id=="802") {
+  document.getElementById("siguiente").style.display="none";
+}
+else {
+  document.getElementById("siguiente").style.display="block";}
+
+if (pokemons.id=="1") {
+    document.getElementById("anterior").style.display="none";}
+  else {
+    document.getElementById("anterior").style.display="block";}
 document.getElementById("nombre2").innerHTML = "Nombre: "+pokemons.species.name;
+document.getElementById("imagenpoke").setAttribute("title", ""+pokemons.species.name+"");
 var peso = pokemons.weight;
 peso = (peso/10);
 document.getElementById("load").innerHTML = "Peso: "+peso+" kg";
