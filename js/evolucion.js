@@ -14,16 +14,23 @@ function consumidor3(url){
 }
 //consumir para crear las imagenes
 var evolucion5;
-function consumidor4(poke2){
+function consumidor4(poke2,poke){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           evolucion5 = JSON.parse(this.responseText);
           console.log(evolucion5);
           var node = document.createElement("IMG");
-          node.setAttribute("id", poke2);
+          node.setAttribute("onclick", "consumirpokemon("+poke2+")");
           node.setAttribute("src",evolucion5.sprites.front_default);
-          document.getElementById("evolucion4").appendChild(node);
+          if(poke==0){
+          document.getElementById("evolution1").appendChild(node);
+        }else if(poke==1){
+          document.getElementById("evolution2").appendChild(node);
+        }else if (poke==2) {
+          document.getElementById("evolution3").appendChild(node);
+        }
+
       }
   };
   xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/"+poke2+"/" , true);

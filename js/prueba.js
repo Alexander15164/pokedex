@@ -63,43 +63,40 @@ document.getElementById("description").value = species.flavor_text_entries[i].fl
 break;
   }
 }
-
+var poke=0;
 //evolucion 1
     //document.getElementById("evolucion1").innerHTML = evolucion.chain.species.name;
-    //aEvoluciones[0] = evolucion.chain.species.url.slice(42, -1);
-    //consumidor4(aEvoluciones[iContador]);
-    //iContador = 1;
-    //console.log("urlEvolucion 1:  " + aEvoluciones[0]);
+    aEvoluciones[0] = evolucion.chain.species.url.slice(42, -1);
+    consumidor4(aEvoluciones[iContador],poke);
+    iContador = 1;
+    console.log("urlEvolucion 1:  " + aEvoluciones[0]);
 
 
 //evolucion 2
-    //if (evolucion.chain.evolves_to[0] != null && evolucion.chain.evolves_to[0] != undefined) {
-        //for (var i = 0; i < evolucion.chain.evolves_to.length; i++) {
+    if (evolucion.chain.evolves_to[0] != null && evolucion.chain.evolves_to[0] != undefined) {
+        for (var i = 0; i < evolucion.chain.evolves_to.length; i++) {
           //  document.getElementById("evolucion2").innerHTML += evolucion.chain.evolves_to[i].species.name + "<br>";
-          //  aEvoluciones[iContador] = evolucion.chain.evolves_to[i].species.url.slice(42, -1);
-          //  console.log("urlEvolucion " + iContador + ":  " + aEvoluciones[iContador]);
-          //  consumidor4(aEvoluciones[iContador]);
-          //  iContador = iContador + 1;
-        //}
+            aEvoluciones[iContador] = evolucion.chain.evolves_to[i].species.url.slice(42, -1);
+            console.log("urlEvolucion " + iContador + ":  " + aEvoluciones[iContador]);
+            poke=1;
+            consumidor4(aEvoluciones[iContador],poke);
+            iContador = iContador + 1;
+        }
 
-    //} else {
-      //  document.getElementById("evolucion2").innerHTML = "Desconocido";
-    //}
+    }
 
 //evolucion 3
-    //if ((evolucion.chain.evolves_to[0] != null && evolucion.chain.evolves_to[0] != undefined) && (evolucion.chain.evolves_to[0].evolves_to[0] != null && evolucion.chain.evolves_to[0].evolves_to[0] != undefined)) {
-    //    for (var i = 0; i < evolucion.chain.evolves_to.length; i++) {
-      //      for (var j = 0; j < evolucion.chain.evolves_to[i].evolves_to.length; j++) {
-        //        document.getElementById("evolucion3").innerHTML += evolucion.chain.evolves_to[i].evolves_to[j].species.name+ "<br>";
-          //      aEvoluciones[iContador] = evolucion.chain.evolves_to[i].evolves_to[j].species.url.slice(42, -1);
-            //    console.log("urlEvolucion " + iContador + ":  " + aEvoluciones[iContador]);
-            //    consumidor4(aEvoluciones[iContador]);
-            //    iContador = iContador + 1;
-            //}
-        //}
-    //} else {
-      //  document.getElementById("evolucion3").innerHTML = "Desconocido";
-    //}
+    if ((evolucion.chain.evolves_to[0] != null && evolucion.chain.evolves_to[0] != undefined) && (evolucion.chain.evolves_to[0].evolves_to[0] != null && evolucion.chain.evolves_to[0].evolves_to[0] != undefined)) {
+       for (var i = 0; i < evolucion.chain.evolves_to.length; i++) {
+            for (var j = 0; j < evolucion.chain.evolves_to[i].evolves_to.length; j++) {
+                aEvoluciones[iContador] = evolucion.chain.evolves_to[i].evolves_to[j].species.url.slice(42, -1);
+               console.log("urlEvolucion " + iContador + ":  " + aEvoluciones[iContador]);
+               poke=2
+                consumidor4(aEvoluciones[iContador],poke);
+                iContador = iContador + 1;
+            }
+        }
+    }
       document.getElementById("carga").style.display="none";
       document.getElementById("information").style.display="block";
       document.getElementById("evolucion").style.display="block";
