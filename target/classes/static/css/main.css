@@ -487,13 +487,14 @@ display: none;
   position: relative;
   left: 15%;
   width: 70%;
-  height: 200px;
+  /*height: 200px;*/
   border: 10px solid rgb(26, 26, 26);
   border-style: ridge;
   background-color: rgb(0, 0, 0);
   opacity: 0.80;
   border-radius: 35px;
   display: none;
+
 }
 
   #imagenpokes{
@@ -750,4 +751,34 @@ text-transform: capitalize !important;
   position: absolute;
   left: -120px;
   top: 200px;
+}
+.evolucioness{
+  width: 150px;
+  height: 150px;
+}
+.evolucionesNOM{
+  font-size: 20px;
+  text-transform: capitalize !important;
+  font-weight: bold;
+position: relative;
+top: -25px;
+left: 25px;
+
+}
+/*AJUSTES PARA PRIMERA EVOLUCION*/
+#evolution1{
+  position: relative;
+  top:-20px;
+}
+
+#evolution2{
+  position: relative;
+  top:-220px;
+  left: 140px;
+}
+
+#evolution3{
+  position: relative;
+  top:-420px;
+  left: 290px;
 }
