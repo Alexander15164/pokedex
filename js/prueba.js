@@ -2,9 +2,6 @@ var pokemons
 var aEvoluciones = [];
 var iContador = 0;
 function consumirpokemon(pokemon) {
-  document.getElementById("information").style.display="none";
-  document.getElementById("evolucion").style.display="none";
-  document.getElementById("carga").style.display="block";
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -115,7 +112,7 @@ var poke=0;
             }
         }
     }
-    
+
 
 }
 //llamar las especies
