@@ -44,3 +44,19 @@ document.getElementById("evolucion").style.display="none";
 document.getElementById("carga").style.display="block";
 console.log("lo paso");
 }
+function concetrado(){
+var cantidad = 4;
+console.log("entro");
+for (var i = 0; i < cantidad; i++) {
+  var div =document.createElement("div");
+  var br =document.createElement("br");
+  div.setAttribute("class","favoritos");
+  div.setAttribute("id","texto"+i);
+div.setAttribute("id","texto"+i);
+  document.getElementById("contenido").appendChild(div);
+  var h2 =document.createElement("h2");
+  h2.innerHTML="Contenido del favorito";
+  document.getElementById("texto"+i).appendChild(h2);
+  document.getElementById("contenido").appendChild(br);
+}
+}

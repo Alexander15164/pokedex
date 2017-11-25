@@ -1,0 +1,22 @@
+#pageFAV{
+  width: 60%;
+  border: solid 1px rgb(233, 82, 82);
+  border-radius: 20px;
+  border-style: dashed;
+  position: relative;
+  top: -40px;
+  left: 20%;
+}
+
+.favoritos{
+  width: 90%;
+  height: 150px;
+  border: solid 1px rgb(233, 82, 82);
+  border-radius: 20px;
+  border-style: dashed;
+  position: relative;
+  left: 5%;
+  text-align: center;
+  background-color: rgb(236, 236, 236);
+  
+}

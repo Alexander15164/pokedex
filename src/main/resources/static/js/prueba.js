@@ -115,9 +115,7 @@ var poke=0;
             }
         }
     }
-      document.getElementById("carga").style.display="none";
-      document.getElementById("information").style.display="block";
-      document.getElementById("evolucion").style.display="block";
+    
 
 }
 //llamar las especies
