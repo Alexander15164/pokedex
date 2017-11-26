@@ -1,22 +1,62 @@
 #pageFAV{
-  width: 60%;
+  width: 70%;
   border: solid 1px rgb(233, 82, 82);
   border-radius: 20px;
   border-style: dashed;
   position: relative;
   top: -40px;
-  left: 20%;
+  left: 15%;
+}
+#contenido{
+  display: none;
 }
 
 .favoritos{
-  width: 90%;
-  height: 150px;
+  width: 45%;
+  height: 180px;
   border: solid 1px rgb(233, 82, 82);
   border-radius: 20px;
   border-style: dashed;
   position: relative;
-  left: 5%;
+  left: 27.5%;
   text-align: center;
   background-color: rgb(236, 236, 236);
-  
+
+}
+.perfiles{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 15px;
+  top: -20px;
+}
+
+.pokebola{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 235px;
+  top: 20px;
+}
+
+.idpoke{
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 27px;
+  left: 295px;
+}
+
+.nombrefavorito{
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 85px;
+    text-transform: capitalize !important;
+  left: 285px;
+}
+#cargarFavorito{
+  font-size: 40px;
+  position: relative;
+  left: 40%;
 }

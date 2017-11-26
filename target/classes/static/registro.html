@@ -11,6 +11,7 @@
   <link href="css/main.css" rel="stylesheet">
 
 
+
       <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       /*still in the works :P*/
@@ -277,7 +278,7 @@ body {
     </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+  
 </head>
 
 <body>
@@ -307,31 +308,30 @@ body {
   <div class="login">
     <h1>Registrate</h1>
 
-    <form class="form" method="post" action="#">
+		<form id="registro" class="form">
 
-      <p class="field">
+			<p class="field">
 
-        <input type="text" name="login" placeholder="Username" required/>
-        <br><br>
-        <i class="fa fa-user"></i>
-      </p>
-<br>
-      <p class="field">
-        <input type="password" name="password" placeholder="Password" required/>
-        <i class="fa fa-lock"></i>
-      </p>
-<br>
-      <p class="submit"><input type="submit" name="sent" value="Registrarme"></p>
-      <a href="login.html">Ya tengo una cuenta</a>
+				<input type="text" id="login" name="login" placeholder="Username"
+					required /> <br>
+				<br> <i class="fa fa-user"></i>
+			</p>
+			<br>
+			<p class="field">
+				<input type="password" id="pass" name="password"
+					placeholder="Password" required /> <i class="fa fa-lock"></i>
+			</p>
+			<br> <input type="submit" name="sent" value="Registrarme">
+			<a href="login.html">Ya tengo una cuenta</a>
 
-    </form>
+		</form>
 
-    <div class="copyright">
+		<div class="copyright">
         <p>Copyright &copy; 2017. Pokedex </p>
     </div>
   </div> <!--/ Login-->
 
 
-
+<script type="text/javascript" src="js/login.js"></script> 
 </body>
 </html>

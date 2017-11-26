@@ -7,6 +7,7 @@
     <meta name="description" content="Pokedex">
     <meta name="author" content="Alexander Monzon, Erick FLores">
     <link rel="shortcut icon" href="img/pokebola.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/funciones.js" charset="utf-8"></script>
     <script src="js/autocomplementacion.js"></script>
     <script src="js/prueba.js"></script>
@@ -38,7 +39,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><input type="text" class="form-control" placeholder="Buscar por..." id="nombre" list="lista" ></li>
+            <li><input type="text" class="form-control" placeholder="Buscar por..." id="nombre" name="busfa" list="lista" ></li>
             <datalist id="lista"></datalist>
             <li><a href="#mi-ancla"><img src="img/bus.png" id="busca" width="45px" height="40px" alt="" onclick="llamarPokemon()"></a></li>
             <li class="active"><a href="index.html">INICIO</a></li>
@@ -153,19 +154,25 @@
   <div class="evoluciones" id="evolution3">
   </div>
 </div>
+<div class="alert alert-danger alert-dismissable" id="error">
+  <button type="button" class="close" data-dismiss="alert" onclick="cerrar()">&times;</button>
+  <strong>¡Cuidado!</strong> Debe proporcionar un parametro para buscar
+</div>
+<div id="noResultado">
+  <h1 id="noresult">NO HAY RESULTADOS PARA TU BUSQUEDA</h1>
+  <br><br>
+</div>
 	<!-- FEATURE SECTION -->
 	<div id="r">
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
 					<h4>¿ENCONTRASTE AL POKEMON QUE BUSCABAS?</h4>
-					<p>Recuerda que esta pokedex estan los pokemones de las 7 generaciones, en total hay 802 pokemones disponibles.</p>
+					<p>Recuerda que esta pokedex estan los pokemon's de las 7 generaciones, en total hay 802 pokemones disponibles.</p>
 				</div>
 			</div><!-- row -->
 		</div><!-- container -->
 	</div><!-- r wrap -->
-
-
 	<!-- FOOTER -->
 	<div id="f">
 		<div class="container">
@@ -175,8 +182,5 @@
 			</div><!-- row -->
 		</div><!-- container -->
 	</div><!-- Footer -->
-
-
-
   </body>
 </html>

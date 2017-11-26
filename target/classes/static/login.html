@@ -307,21 +307,21 @@ body {
   <div class="login">
     <h1>Inicia Sesión</h1>
 
-    <form class="form" method="post" action="#">
+    <form class="form" id="login">
 
       <p class="field">
 
-        <input type="text" name="login" placeholder="Username" required/>
+        <input type="text" id="user" name="login" placeholder="Username" required/>
         <br><br>
         <i class="fa fa-user"></i>
       </p>
 <br>
       <p class="field">
-        <input type="password" name="password" placeholder="Password" required/>
+        <input type="password" id="pass" name="password" placeholder="Password" required/>
         <i class="fa fa-lock"></i>
       </p>
 <br>
-      <p class="submit"><input type="submit" name="sent" value="Iniciar"></p>
+      <input type="submit" name="sent" value="Iniciar">
 
       <a href="registro.html">¿No tienes un cuenta? !!Registrare ahora!!</a>
     </form>
@@ -332,6 +332,7 @@ body {
   </div> <!--/ Login-->
 
 
+<script type="text/javascript" src="js/loo.js"></script>
 
 </body>
 </html>

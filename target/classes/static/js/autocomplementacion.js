@@ -24,16 +24,37 @@ for(i=0; i<802 ; i++){
 }
 }
 function llamarPokemon(){
-  document.getElementById("information").style.display="none";
-  document.getElementById("evolucion").style.display="none";
-  document.getElementById("pageST").style.display="none";
-  document.getElementById("carga").style.display="block";
-  document.getElementById("tipo2").style.display = "none";
+  document.getElementById("noResultado").style.display="none";
+
   var poke = document.getElementById("nombre").value;
+  console.log(poke);
+if (poke=="") {
+  document.getElementById("error").style.display="block";
+  setTimeout(function(){
+  document.getElementById("error").style.display="none";
+},6500);
+
+}
+else {
   for(i=0; i<802 ; i++){
     if(pokecomply[i] == poke){
+      document.getElementById("noResultado").style.display="none";
+      document.getElementById("information").style.display="none";
+      document.getElementById("evolucion").style.display="none";
+      document.getElementById("pageST").style.display="none";
+      document.getElementById("carga").style.display="block";
+      document.getElementById("tipo2").style.display = "none";
        consumirpokemon((i+1));
        break;
     }
+    else{
+      document.getElementById("information").style.display="none";
+      document.getElementById("evolucion").style.display="none";
+      document.getElementById("pageST").style.display="none";
+
+      document.getElementById("tipo2").style.display = "none";
+      document.getElementById("noResultado").style.display="block";
+    }
+  }
   }
 }
