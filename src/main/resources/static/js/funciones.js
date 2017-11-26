@@ -8,8 +8,7 @@ function Select_favorit(){
     document.getElementById("corazon").style.display="block";
     idadar=document.getElementById('identificador').textContent;
 
-        favori.push(idadar);
-        console.log(favori);
+        
     // favoridocument.getElementById('identificador').value;
     estado=true;
     setTimeout(function(){

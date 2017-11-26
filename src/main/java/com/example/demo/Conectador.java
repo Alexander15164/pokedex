@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Component
 @Service
 public class Conectador {
-String url = "/home/katiro/pokedexdb2.db";
+String url = "src/main/java/com/example/demo/pokedexdb2.db";
 Connection connect;
 
 public void  connect() {
