@@ -1,7 +1,10 @@
 package com.example.demo;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,8 +33,6 @@ public Usuario login(@RequestBody Usuario usuario) {
 	Usuario user = conexion.buscarUsuario(usuario.getUsuario());
 	if(user != null) {
 		if(!user.getPass().equals(usuario.getPass())) {
-			System.out.println("-"+user.getPass()+"-");
-			System.out.println("-"+usuario.getPass()+"-");
 			user = new Usuario(0,"","");
 		}
 	}else {
@@ -40,7 +41,15 @@ public Usuario login(@RequestBody Usuario usuario) {
 	conexion.close();
 	return user;
 }
-
+@PostMapping("/favoritos")
+public void favoritos(@RequestBody String info) {
+	String id = info.split(",")[0];
+	String pokemon = info.split(",")[1];
+	conexion.connect();
+	conexion.favoritos(Integer.parseInt(id),Integer.parseInt(pokemon));
+	conexion.close();
+	
+}
 
 
 

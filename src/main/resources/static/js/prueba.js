@@ -130,3 +130,4 @@ var url = species.evolution_chain.url;
   xmlhttp.open("GET", url , true);
   xmlhttp.send();
 }
+

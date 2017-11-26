@@ -15,7 +15,20 @@ function Select_favorit(){
     setTimeout(function(){
     document.getElementById("corazon").style.display="none";
   },700);
-
+    
+    if(document.cookie.length>0){
+		var idpokemon = document.getElementById("identificador").textContent
+		
+		 var xmlhttp = new XMLHttpRequest();
+		 xmlhttp.open("POST","/favoritos",true);
+		 var usuario = document.cookie.split(",")[0];
+			usuario = usuario.split("usuario=")[1];
+			console.log("id:"+usuario);
+    xmlhttp.send(usuario+","+idpokemon);
+    alert("Aguardado");
+	}else{
+		alert("No esta registrado");
+	}
   }
   else {
     document.getElementById("favor").setAttribute("src", "img/poke.png");

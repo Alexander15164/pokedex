@@ -78,6 +78,17 @@ public Usuario login(String usuario, String pass) {
 	}
 	return user;
 }
+
+public void favoritos(int id, int pokemon) {
+	try {
+	PreparedStatement st = connect.prepareStatement("insert into pokemon(id, id_pokemon) values (?,?)");
+	st.setInt(1, id);
+	st.setInt(2, pokemon);
+	st.execute();
+	}catch (SQLException e) {
+		System.err.println(e.getMessage());
+	}
+}
 	}
 
 

@@ -13,6 +13,11 @@ document.getElementById("registro").onsubmit = function(e){
 	    	alert("ya esta creado");
 	    }else{
 	    	alert("Creado con exito");
+	    	 var date = new Date();
+	         date.setTime(date.getTime() + (60 * 1000));
+	         var expires = "; expires=" + date.toGMTString();
+	         document.cookie = "usuario=" + [respuesta.id, respuesta.usuario] + expires;
+	         console.log(document.cookie);
 	    }
 	    }
 	  };

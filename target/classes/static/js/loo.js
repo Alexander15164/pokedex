@@ -13,6 +13,11 @@ document.getElementById("login").onsubmit = function(e){
 	    	alert("Usuario o contraseña incorrecta");
 	    }else{
 	    	alert("Logiado");
+	    	var date = new Date();
+	         date.setTime(date.getTime() + (60 * 1000));
+	         var expires = "; expires=" + date.toGMTString();
+	         document.cookie = "usuario=" + [login.id, login.usuario] + expires;
+	         console.log(document.cookie);
 	    }
 	    }
 	  };
