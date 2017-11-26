@@ -101,3 +101,7 @@ for (var i = 0; i < favori.length; i++) {
 
 
 }
+function cerrar(){
+  document.getElementById("error").style.display="none";
+  
+}
