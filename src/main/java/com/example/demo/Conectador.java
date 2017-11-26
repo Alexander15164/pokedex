@@ -89,6 +89,23 @@ public void favoritos(int id, int pokemon) {
 		System.err.println(e.getMessage());
 	}
 }
+
+public String buscarPokemon(Integer usuario){
+	try{
+		String pokemons = "";
+		PreparedStatement st = connect.prepareStatement("SELECT * FROM pokemon WHERE id=?");
+		st.setInt(1, usuario);
+		ResultSet rs = st.executeQuery();
+		while (rs.next()){
+			pokemons += rs.getString(3)+",";
+		}
+		return pokemons;
+	}catch(SQLException ex){
+		System.err.println(ex.getMessage());
+		return "";
+	}
+}
+
 	}
 
 

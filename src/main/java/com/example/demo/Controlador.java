@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -41,7 +43,7 @@ public Usuario login(@RequestBody Usuario usuario) {
 	conexion.close();
 	return user;
 }
-@PostMapping("/favoritos")
+@PostMapping("/favoritosPost")
 public void favoritos(@RequestBody String info) {
 	String id = info.split(",")[0];
 	String pokemon = info.split(",")[1];
@@ -50,6 +52,13 @@ public void favoritos(@RequestBody String info) {
 	conexion.close();
 	
 }
+@GetMapping("/favoritos/{id}")
+public String favoritosByUsuario(@PathVariable int id) {
+		conexion.connect();
+		String resultado = conexion.buscarPokemon(id);
+		conexion.close();
+		return resultado;
+	}
 
 
 

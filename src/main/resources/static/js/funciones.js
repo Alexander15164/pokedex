@@ -1,5 +1,5 @@
 var estado= false;
-var favori =[23,56,78,45,67,89,14,15,46,56,78,36,47,56];
+//var favori =[23,56,78,45,67,89,14,15,46,56,78,36,47,56];
 function Select_favorit(){
   if (estado==false) {
     document.getElementById("corazon").setAttribute("src", "img/favoritoMas.png");
@@ -20,7 +20,7 @@ function Select_favorit(){
 		var idpokemon = document.getElementById("identificador").textContent
 		
 		 var xmlhttp = new XMLHttpRequest();
-		 xmlhttp.open("POST","/favoritos",true);
+		 xmlhttp.open("POST","/favoritosPost",true);
 		 var usuario = document.cookie.split(",")[0];
 			usuario = usuario.split("usuario=")[1];
 			console.log("id:"+usuario);
@@ -66,12 +66,13 @@ document.getElementById("evolucion").style.display="none";
 document.getElementById("carga").style.display="block";
 console.log("lo paso");
 }
-function concetrado(){
+
+function concetrado(favori){
 
 console.log("entro");
 
 // 141,373,465,767,567,3,56,45,329,1,45,67,87,89,34,85,78,9,56,12,66,7,4
-for (var i = 0; i < favori.length; i++) {
+for (var i = 0; i < favori.length-1; i++) {
 
   var div =document.createElement("div");
   var br =document.createElement("br");
@@ -108,12 +109,26 @@ for (var i = 0; i < favori.length; i++) {
   document.getElementById("texto"+i).appendChild(imgquitar);
   imgquitar.setAttribute("id","quitar"+i);
   document.getElementById("contenido").appendChild(br);
-    consumirpokemonfavorito(favori[i],i);
+  console.log(favori[i]);
+    consumirpokemonfavorito(favori[i],i,favori);
 }
-
-
-
 }
+function llamarfavoritos(){
+	var usuario = document.cookie.split(",")[0];
+	usuario = usuario.split("usuario=")[1];
+	console.log("id:"+usuario);
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	        var pokemons = this.responseText.split(",");
+	        console.log(pokemons);
+	        concetrado(pokemons);
+	        
+	    }
+	};
+	xmlhttp.open("GET", "/favoritos/"+usuario , true);
+	xmlhttp.send();
+	}
 function cerrar(){
   document.getElementById("error").style.display="none";
   
