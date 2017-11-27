@@ -16,8 +16,11 @@ document.getElementById("registro").onsubmit = function(e){
 	    	 var date = new Date();
 	         date.setTime(date.getTime() + (60 * 1000));
 	         var expires = "; expires=" + date.toGMTString();
-	         document.cookie = "usuario=" + [respuesta.id, respuesta.usuario] + expires;
+	         document.cookie = "usuario=" + [login.id, login.usuario] + expires;
 	         console.log(document.cookie);
+//	         location.href ="index.html";
+	         
+	         
 	    }
 	    }
 	  };
@@ -26,5 +29,3 @@ document.getElementById("registro").onsubmit = function(e){
 	  xhttp.setRequestHeader("Accept", "application/json");
 	  xhttp.send(JSON.stringify({"id": 0, "usuario": usuario, "pass": pass}));
 	  	}
-
- 

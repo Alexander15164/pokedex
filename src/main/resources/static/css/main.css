@@ -821,3 +821,18 @@ width: 200px;
   font-size: 30px;
   text-align: center;
 }
+#navfav{
+	display: none;
+	text-transform: uppercase;
+}
+
+#navusu{
+	display:none;
+}
+#navlogin{
+	display:none;
+}
+
+#navreg{
+	display:none;
+}

@@ -276,7 +276,11 @@ body {
 
     </style>
 
-
+<script>
+window.onload = function() {
+document.getElementById("navlogin").style.display="block";
+document.getElementById("navreg").style.display="block";}
+</script>
 
 </head>
 
@@ -294,12 +298,15 @@ body {
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">INICIO</a></li>
-          <li><a href="about.html">ACERCA DE</a></li>
-          <li><a href="login.html">INICIAR SESION</a></li>
-          <li><a href="registro.html">REGISTRARSE</a></li>
-
-        </ul>
+            
+            <li class="active"><a href="index.html">INICIO</a></li>
+            <li><a href="about.html">ACERCA DE</a></li>
+            <li id="navlogin"><a href="login.html">INICIAR SESION</a></li>
+            <li id="navreg"><a href="registro.html">REGISTRARSE</a></li>
+            
+            <li><p id="navusu"></p></li>
+            <li><img src="img/favoritoMas.png" width="30px" height="30px" alt="" id="corazon"></li>
+          </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>

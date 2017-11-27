@@ -18,6 +18,7 @@ document.getElementById("login").onsubmit = function(e){
 	         var expires = "; expires=" + date.toGMTString();
 	         document.cookie = "usuario=" + [login.id, login.usuario] + expires;
 	         console.log(document.cookie);
+        location.href ="index.html";
 	    }
 	    }
 	  };

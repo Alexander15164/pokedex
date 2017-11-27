@@ -67,8 +67,12 @@ console.log("lo paso");
 }
 
 function concetrado(favori){
+	if(favori.length==1){
+		document.getElementById("cargarFavorito").innerHTML="No tienes pokemon's favoritos";
+	}
+	else{
 
-console.log("entro");
+
 
 // 141,373,465,767,567,3,56,45,329,1,45,67,87,89,34,85,78,9,56,12,66,7,4
 for (var i = 0; i < favori.length-1; i++) {
@@ -112,7 +116,26 @@ for (var i = 0; i < favori.length-1; i++) {
     consumirpokemonfavorito(favori[i],i,favori);
 }
 }
+	}
 function llamarfavoritos(){
+	  
+	    	window.setInterval(function(){
+	    		if(document.cookie.length==0){
+	    			console.log("NO HAY LOGEO");
+	    			location.href ="index.html";  	         
+	    	         
+	       	}	
+	       	else{
+	       		console.log("LOGEADO");
+	       		var usuario = document.cookie.split(",")[1];
+		     	usuario = usuario.split("usuario=")[0];
+		     	document.getElementById("navfav").innerHTML="FAVORITOS DE  "+usuario;
+		     	
+	    	         
+	       	}},1000);
+	    	
+	    	
+	    
 	var usuario = document.cookie.split(",")[0];
 	usuario = usuario.split("usuario=")[1];
 	console.log("id:"+usuario);

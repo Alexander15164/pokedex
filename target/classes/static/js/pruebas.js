@@ -17,6 +17,7 @@ xmlhttp.send();
 }
 //mostrar los pokemon
 function mostrarfavorito(iddato,favori){
+	
 
  document.getElementById("nombre"+iddato).innerHTML = "Nombre: "+pokemons.species.name;
  document.getElementById("perfil"+iddato).src = pokemons.sprites.front_default;
@@ -27,5 +28,5 @@ function mostrarfavorito(iddato,favori){
  document.getElementById("contenido").style.display="block";
  }
 
+	}
 
-}
