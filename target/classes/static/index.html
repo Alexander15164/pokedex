@@ -40,7 +40,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><input type="text" class="form-control" placeholder="Buscar por..." id="nombre" name="busfa" list="lista" ></li>
+            <li><input type="text" class="form-control" placeholder="Cargando datos..." id="nombre" name="busfa" list="lista"  disabled></li>
             <datalist id="lista"></datalist>
             <li><a href="#mi-ancla"><img src="img/bus.png" id="busca" width="45px" height="40px" alt="" onclick="llamarPokemon()"></a></li>
             <li class="active"><a href="index.html">INICIO</a></li>
@@ -77,14 +77,14 @@
 <div id="pageST">
   <h1 id="bienvenida">Bienvenido a esta pokedex</h1>
 
-  <h2 id="info">Aqui encontraras la informacion acerca de los pokemones</h2>
+  <h2 id="info">Aqui encontraras la informacion acerca de los pokemons</h2>
 
   <h3 id="indicacion">Puedes encontrarlos escribiendo su nombre en el buscador de arriba</h3>
   <br>
   <img src="img/indicacion.png" alt="imagen de indicacion" id="img">
 </div>
 
-  <img src="img/carga3.gif" alt="Cargando datos..." id="carga">
+  <img src="img/carga3.gif" alt="Cargando datos..." id="carga" title="Cargando datos..."/>
 
 <div id="information">
 <img src="img/flecha.png" alt="Siguiente" id="siguiente" onclick="cargarSiguiente()" title="Siguiente Pokemon">
@@ -157,10 +157,15 @@
 </div>
 <div class="alert alert-danger alert-dismissable" id="error">
   <button type="button" class="close" data-dismiss="alert" onclick="cerrar()">&times;</button>
-  <strong>¡Cuidado!</strong> Debe proporcionar un parametro para buscar
+  <strong>¡Cuidado!</strong> Debe proporcionar un nombre para buscar
 </div>
 <div id="noResultado">
   <h1 id="noresult">NO HAY RESULTADOS PARA TU BUSQUEDA</h1>
+  <br><br>
+</div>
+
+<div id="Conexion">
+  <h1 id="noconection">NO ESTAS CONECTADO, REVISA TU CONECCION</h1>
   <br><br>
 </div>
 	<!-- FEATURE SECTION -->
@@ -169,7 +174,7 @@
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
 					<h4>¿ENCONTRASTE AL POKEMON QUE BUSCABAS?</h4>
-					<p>Recuerda que esta pokedex estan los pokemon's de las 7 generaciones, en total hay 802 pokemones disponibles.</p>
+					<p>Recuerda que esta pokedex estan los pokemons de las 7 generaciones, en total hay 802 pokemones disponibles.</p>
 				</div>
 			</div><!-- row -->
 		</div><!-- container -->

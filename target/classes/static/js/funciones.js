@@ -37,9 +37,9 @@ var ifg = document.getElementById("identificador").textContent;
 ifg = parseInt(ifg);
 
 consumirpokemon(ifg+1);
-document.getElementById("information").style.display="none";
-document.getElementById("evolucion").style.display="none";
-document.getElementById("carga").style.display="block";
+//document.getElementById("information").style.display="none";
+//document.getElementById("evolucion").style.display="none";
+//document.getElementById("carga").style.display="block";
 
 }
 

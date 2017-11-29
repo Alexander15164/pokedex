@@ -1,18 +1,35 @@
 var pokemons
 var aEvoluciones = [];
 var iContador = 0;
+var url;
 function consumirpokemon(pokemon) {
+	document.getElementById("information").style.display="none";
+	document.getElementById("evolucion").style.display="none";
+	document.getElementById("carga").style.display="block";
+	var estado=false;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         pokemons = JSON.parse(this.responseText);
-
-        var url = pokemons.species.url;
-        consumidor2(url);
+        estado=true;
+        url = pokemons.species.url;
+        consumidor2(url); 
+        
     }
 };
+
 xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/"+pokemon+"/" , true);
 xmlhttp.send();
+
+window.setTimeout(function(){
+	if(estado==true){
+		
+	}
+	else{
+		document.getElementById("carga").style.display="none";
+		document.getElementById("Conexion").style.display="block";
+	}
+},30000);
 }
 //mostrar los pokemon
 function mostrarPokemon(){

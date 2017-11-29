@@ -1,12 +1,13 @@
 var pokemons
 var aEvoluciones = [];
 var iContador = 0;
+var bestado=false;
 function consumirpokemonfavorito(pokemon,iddato,favori) {
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         pokemons = JSON.parse(this.responseText);
-
+        bestado=true;
         var url = pokemons.species.url;
         mostrarfavorito(iddato,favori)
     }
@@ -14,6 +15,16 @@ xmlhttp.onreadystatechange = function() {
 
 xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/"+pokemon+"/" , true);
 xmlhttp.send();
+
+window.setTimeout(function(){
+	if(bestado==true){
+
+	}
+	else{
+		document.getElementById("cargarFavorito").style.display="none";
+		document.getElementById("Conexion").style.display="block";
+	}
+},30000);
 }
 //mostrar los pokemon
 function mostrarfavorito(iddato,favori){

@@ -22,22 +22,35 @@ window.onload = function() {
 
    	}},100);
 
-
-
+	
+var estado=false;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-
-        for(i=0 ; i<802 ; i++){
+        estado=true;
+        document.getElementById("nombre").setAttribute("placeholder","Buscar por...");
+		 document.getElementById("nombre").disabled=false;
+		for(i=0 ; i<802 ; i++){
         	pokecomply[i] = String(myObj.results[i].name);
         }
         creadorDeListas();
+        
     }
+
 };
+
 xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/?limit=802" , true);
 xmlhttp.send();
 
+window.setTimeout(function(){
+	if(estado==true){
+		 
+	}
+	else{
+		document.getElementById("nombre").setAttribute("placeholder","Error ,revisa tu conexion");
+	}
+},30000);
 }
 function creadorDeListas(){
 

@@ -10,15 +10,15 @@ document.getElementById("registro").onsubmit = function(e){
 	    var login = JSON.parse(this.responseText);
 
 	    if(login.id== 0){
-	    	alert("ya esta creado");
+	    	alert("Usuario ya registrado");
 	    }else{
 	    	alert("Creado con exito");
 	    	 var date = new Date();
-	         date.setTime(date.getTime() + (60 * 1000));
+	         date.setTime(date.getTime() + (180s * 1000));
 	         var expires = "; expires=" + date.toGMTString();
 	         document.cookie = "usuario=" + [login.id, login.usuario] + expires;
 
-//	         location.href ="index.html";
+        location.href ="index.html";
 
 
 	    }
