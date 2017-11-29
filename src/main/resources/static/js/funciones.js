@@ -1,20 +1,7 @@
 var estado= false;
-//var favori =[23,56,78,45,67,89,14,15,46,56,78,36,47,56];
+
 function Select_favorit(){
   if (estado==false) {
-    document.getElementById("corazon").setAttribute("src", "img/favoritoMas.png");
-    document.getElementById("favor").setAttribute("src", "img/pokebola.png");
-    document.getElementById("favor").setAttribute("title", "Quitar de favoritos");
-    document.getElementById("corazon").style.display="block";
-    idadar=document.getElementById('identificador').textContent;
-
-        
-    // favoridocument.getElementById('identificador').value;
-    estado=true;
-    setTimeout(function(){
-    document.getElementById("corazon").style.display="none";
-  },700);
-    
     if(document.cookie.length>0){
 		var idpokemon = document.getElementById("identificador").textContent
 		
@@ -24,20 +11,22 @@ function Select_favorit(){
 			usuario = usuario.split("usuario=")[1];
 			console.log("id:"+usuario);
     xmlhttp.send(usuario+","+idpokemon);
-    alert("Aguardado");
-	}else{
-		alert("No esta registrado");
-	}
-  }
-  else {
-    document.getElementById("favor").setAttribute("src", "img/poke.png");
-    document.getElementById("corazon").setAttribute("src", "img/favoritoMenos.png");
-    document.getElementById("favor").setAttribute("title", "Agregar a favoritos");
+    document.getElementById("corazon").setAttribute("src", "img/favoritoMas.png");
+    document.getElementById("favor").setAttribute("src", "img/pokebola.png");
+    document.getElementById("favor").setAttribute("title", "Quitar de favoritos");
     document.getElementById("corazon").style.display="block";
-    estado=false;
+//    idadar=document.getElementById('identificador').textContent;
+
+        
+    
+    estado=true;
     setTimeout(function(){
     document.getElementById("corazon").style.display="none";
   },700);
+    alert("Agregado a tus favoritos");
+	}else{
+		alert("No estas registrado. Inicia sesion para poder tener favoritos");
+	}
   }
 }
 
