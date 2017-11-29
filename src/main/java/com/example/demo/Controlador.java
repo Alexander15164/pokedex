@@ -34,7 +34,7 @@ public Usuario login(@RequestBody Usuario usuario) {
 	conexion.connect();
 	Usuario user = conexion.buscarUsuario(usuario.getUsuario());
 	if(user != null) {
-		if(!user.getPass().equals(usuario.getPass())) {
+		if(!user.getPass().equals(usuario.getPass()) && !user.getUsuario().equals(usuario.getUsuario())) {
 			user = new Usuario(0,"","");
 		}
 	}else {
