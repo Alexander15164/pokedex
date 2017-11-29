@@ -6,7 +6,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         pokemons = JSON.parse(this.responseText);
-        console.log(pokemons);
+
         var url = pokemons.species.url;
         consumidor2(url);
     }
@@ -84,7 +84,7 @@ var poke=0;
     aEvoluciones[0] = evolucion.chain.species.url.slice(42, -1);
     consumidor4(aEvoluciones[0],poke);
     iContador = 1;
-    console.log("urlEvolucion 1:  " + aEvoluciones[0]);
+
 
 
 //evolucion 2
@@ -92,7 +92,7 @@ var poke=0;
         for (var i = 0; i < evolucion.chain.evolves_to.length; i++) {
           //  document.getElementById("evolucion2").innerHTML += evolucion.chain.evolves_to[i].species.name + "<br>";
             aEvoluciones[iContador] = evolucion.chain.evolves_to[i].species.url.slice(42, -1);
-            console.log("urlEvolucion " + iContador + ":  " + aEvoluciones[iContador]);
+
             poke=1;
             consumidor4(aEvoluciones[iContador],poke);
             iContador = iContador + 1;
@@ -105,7 +105,7 @@ var poke=0;
        for (var i = 0; i < evolucion.chain.evolves_to.length; i++) {
             for (var j = 0; j < evolucion.chain.evolves_to[i].evolves_to.length; j++) {
                 aEvoluciones[iContador] = evolucion.chain.evolves_to[i].evolves_to[j].species.url.slice(42, -1);
-               console.log("urlEvolucion " + iContador + ":  " + aEvoluciones[iContador]);
+
                poke=2
                 consumidor4(aEvoluciones[iContador],poke);
                 iContador = iContador + 1;
@@ -122,7 +122,7 @@ function consumidor2(url){
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           species = JSON.parse(this.responseText);
-          console.log(species);
+
 var url = species.evolution_chain.url;
           consumidor3(url);
       }
@@ -130,4 +130,3 @@ var url = species.evolution_chain.url;
   xmlhttp.open("GET", url , true);
   xmlhttp.send();
 }
-

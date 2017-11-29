@@ -5,7 +5,7 @@ function consumidor3(url){
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           evolucion = JSON.parse(this.responseText);
-          console.log(evolucion);
+
           mostrarPokemon();
       }
   };
@@ -19,13 +19,13 @@ function consumidor4(poke2,poke){
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           evolucion5 = JSON.parse(this.responseText);
-          console.log(evolucion5);
+
           //var node0 = document.createElement("DIV");
           var node = document.createElement("IMG");
           var node2 = document.createElement("P");
           var node3 =document.createElement("IMG");
           var textnode = document.createTextNode(evolucion5.name);
-          console.log(textnode);
+
           node3.setAttribute("src","img/flecha.png");
           node2.appendChild(textnode);
           node.setAttribute("onclick", "consumirpokemon("+poke2+")");

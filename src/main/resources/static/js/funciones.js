@@ -4,12 +4,12 @@ function Select_favorit(){
   if (estado==false) {
     if(document.cookie.length>0){
 		var idpokemon = document.getElementById("identificador").textContent
-		
+
 		 var xmlhttp = new XMLHttpRequest();
 		 xmlhttp.open("POST","/favoritosPost",true);
 		 var usuario = document.cookie.split(",")[0];
 			usuario = usuario.split("usuario=")[1];
-			console.log("id:"+usuario);
+
     xmlhttp.send(usuario+","+idpokemon);
     document.getElementById("corazon").setAttribute("src", "img/favoritoMas.png");
     document.getElementById("favor").setAttribute("src", "img/pokebola.png");
@@ -17,8 +17,8 @@ function Select_favorit(){
     document.getElementById("corazon").style.display="block";
 //    idadar=document.getElementById('identificador').textContent;
 
-        
-    
+
+
     estado=true;
     setTimeout(function(){
     document.getElementById("corazon").style.display="none";
@@ -32,27 +32,27 @@ function Select_favorit(){
 
 
 function cargarSiguiente(){
-console.log("entro");
+
 var ifg = document.getElementById("identificador").textContent;
 ifg = parseInt(ifg);
-console.log(ifg);
+
 consumirpokemon(ifg+1);
 document.getElementById("information").style.display="none";
 document.getElementById("evolucion").style.display="none";
 document.getElementById("carga").style.display="block";
-console.log("lo paso");
+
 }
 
 function cargarAnterior(){
-console.log("entro");
+
 var ifg = document.getElementById("identificador").textContent;
 ifg = parseInt(ifg);
-console.log(ifg);
+
 consumirpokemon(ifg-1);
 document.getElementById("information").style.display="none";
 document.getElementById("evolucion").style.display="none";
 document.getElementById("carga").style.display="block";
-console.log("lo paso");
+
 }
 
 function concetrado(favori){
@@ -101,40 +101,40 @@ for (var i = 0; i < favori.length-1; i++) {
   document.getElementById("texto"+i).appendChild(imgquitar);
   imgquitar.setAttribute("id","quitar"+i);
   document.getElementById("contenido").appendChild(br);
-  console.log(favori[i]);
+
     consumirpokemonfavorito(favori[i],i,favori);
 }
 }
 	}
 function llamarfavoritos(){
-	  
+
 	    	window.setInterval(function(){
 	    		if(document.cookie.length==0){
-	    			console.log("NO HAY LOGEO");
-	    			location.href ="index.html";  	         
-	    	         
-	       	}	
+
+	    			location.href ="index.html";
+
+	       	}
 	       	else{
-	       		console.log("LOGEADO");
+
 	       		var usuario = document.cookie.split(",")[1];
 		     	usuario = usuario.split("usuario=")[0];
 		     	document.getElementById("navfav").innerHTML="FAVORITOS DE  "+usuario;
-		     	
-	    	         
+
+
 	       	}},1000);
-	    	
-	    	
-	    
+
+
+
 	var usuario = document.cookie.split(",")[0];
 	usuario = usuario.split("usuario=")[1];
-	console.log("id:"+usuario);
+
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
 	        var pokemons = this.responseText.split(",");
-	        console.log(pokemons);
+	
 	        concetrado(pokemons);
-	        
+
 	    }
 	};
 	xmlhttp.open("GET", "/favoritos/"+usuario , true);
@@ -142,5 +142,5 @@ function llamarfavoritos(){
 	}
 function cerrar(){
   document.getElementById("error").style.display="none";
-  
+
 }
