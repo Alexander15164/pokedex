@@ -62,6 +62,8 @@ for(i=0; i<802 ; i++){
 }
 }
 function llamarPokemon(){
+	document.getElementById("favor").setAttribute("src", "img/poke.png");
+	document.getElementById("favor").setAttribute("alt","Agregar a favorito");
   document.getElementById("noResultado").style.display="none";
 
   var poke = document.getElementById("nombre").value;

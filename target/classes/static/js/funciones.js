@@ -3,27 +3,36 @@ var estado= false;
 function Select_favorit(){
   if (estado==false) {
     if(document.cookie.length>0){
-		var idpokemon = document.getElementById("identificador").textContent
+    	var imagen = document.getElementById('favor').alt;
+    	console.log(imagen);
+    	http://localhost:8080/img/pokebola.png
+    	if(imagen=="Pokemon favorito"){
+    		alert("El pokemon ya esta agregado a tus favoritos");	
+    	} 
+    	else{
+    		var idpokemon = document.getElementById("identificador").textContent
 
-		 var xmlhttp = new XMLHttpRequest();
-		 xmlhttp.open("POST","/favoritosPost",true);
-		 var usuario = document.cookie.split(",")[0];
-			usuario = usuario.split("usuario=")[1];
+   		 var xmlhttp = new XMLHttpRequest();
+   		 xmlhttp.open("POST","/favoritosPost",true);
+   		 var usuario = document.cookie.split(",")[0];
+   			usuario = usuario.split("usuario=")[1];
 
-    xmlhttp.send(usuario+","+idpokemon);
-    document.getElementById("corazon").setAttribute("src", "img/favoritoMas.png");
-    document.getElementById("favor").setAttribute("src", "img/pokebola.png");
-    document.getElementById("favor").setAttribute("title", "Quitar de favoritos");
-    document.getElementById("corazon").style.display="block";
-//    idadar=document.getElementById('identificador').textContent;
+       xmlhttp.send(usuario+","+idpokemon);
+       document.getElementById("corazon").setAttribute("src", "img/favoritoMas.png");
+       document.getElementById("favor").setAttribute("src", "img/pokebola.png");
+       document.getElementById("favor").setAttribute("title", "Quitar de favoritos");
+       document.getElementById("corazon").style.display="block";
+//       idadar=document.getElementById('identificador').textContent;
 
 
 
-    estado=true;
-    setTimeout(function(){
-    document.getElementById("corazon").style.display="none";
-  },700);
-    alert("Agregado a tus favoritos");
+       estado=true;
+       setTimeout(function(){
+       document.getElementById("corazon").style.display="none";
+     },700);
+       alert("Agregado a tus favoritos");
+    	}
+		
 	}else{
 		alert("No estas registrado. Inicia sesion para poder tener favoritos");
 	}

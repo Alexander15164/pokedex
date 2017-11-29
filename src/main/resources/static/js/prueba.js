@@ -33,11 +33,40 @@ window.setTimeout(function(){
 }
 //mostrar los pokemon
 function mostrarPokemon(){
+	
+	
+	
+	
+	
   //document.getElementById("evolucion4").innerHTML = "";
   document.getElementById("evolution1").innerHTML = "";
   document.getElementById("evolution2").innerHTML = "";
   document.getElementById("evolution3").innerHTML = "";
 document.getElementById("identificador").innerHTML = pokemons.id;
+if(document.cookie.length > 0){
+	var usuario = document.cookie.split(",")[0];
+	usuario = usuario.split("usuario=")[1];
+
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	        var pokemonfv = this.responseText.split(",");
+for (var i = 0; i < pokemonfv.length; i++) {
+	if(pokemons.id == pokemonfv[i]){
+		document.getElementById("favor").setAttribute("src", "img/pokebola.png");
+		document.getElementById("favor").setAttribute("alt","Pokemon favorito");
+	}
+}
+	        
+	    }
+	};
+	xmlhttp.open("GET", "/favoritos/"+usuario , true);
+	xmlhttp.send();
+	
+}
+
+
+
 if (pokemons.id=="802") {
   document.getElementById("siguiente").style.display="none";
 }
