@@ -829,6 +829,9 @@ width: 200px;
 #navusu{
 	display:none;
 }
+#navusu:hover{
+	cursor:pointer;
+}
 #navlogin{
 	display:none;
 }

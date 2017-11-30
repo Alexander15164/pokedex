@@ -176,3 +176,7 @@ var url = species.evolution_chain.url;
   xmlhttp.open("GET", url , true);
   xmlhttp.send();
 }
+function cerrar() {
+	document.cookie="usuario=;expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+}
+	

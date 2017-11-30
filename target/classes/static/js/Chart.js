@@ -1422,3 +1422,8 @@ window.Chart = function(context){
 	    return data ? fn( data ) : fn;
 	  };
 }
+function cerrar() {
+	document.cookie="usuario=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+	location.href ="index.html";
+		
+}

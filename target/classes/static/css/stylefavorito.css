@@ -60,3 +60,6 @@
   position: relative;
   left: 40%;
 }
+#navusus:hover{
+	cursor:pointer;
+}

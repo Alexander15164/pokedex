@@ -4,8 +4,7 @@ function Select_favorit(){
   if (estado==false) {
     if(document.cookie.length>0){
     	var imagen = document.getElementById('favor').alt;
-    	console.log(imagen);
-    	http://localhost:8080/img/pokebola.png
+
     	if(imagen=="Pokemon favorito"){
     		alert("El pokemon ya esta agregado a tus favoritos");	
     	} 

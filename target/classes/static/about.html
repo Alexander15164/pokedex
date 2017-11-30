@@ -77,7 +77,7 @@
             <li id="navlogin"><a href="login.html">INICIAR SESION</a></li>
             <li id="navreg"><a href="registro.html">REGISTRARSE</a></li>
             <li ><a id="navfav" href="favoritos.html">FAVORITOS</a></li>
-            <li><p id="navusu"></p></li>
+            <li><p id="navusu" onclick="cerrar()">CERRAR SESION</p></li>
      
           </ul>
         </div><!--/.nav-collapse -->
@@ -159,6 +159,13 @@
 
 
 
+<script type="text/javascript">
+function cerrar() {
+	document.cookie="usuario=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+	location.href ="index.html";
+		
+}
 
+</script>
   </body>
 </html>
